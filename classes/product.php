@@ -55,9 +55,14 @@ class Product {
         return $this->quantity;
     }
 
-    public function setDiscount($value) {
-        //accetta solo numeri, max 2 cifre
-        $this->discount = $value;
+    public function setDiscount($quantity) {
+        if ($quantity > 1) {
+            $this->discount = 10;
+        } else if ($quantity > 4) {
+            $this->discount = 30;
+        } else {
+            $this->discount = 0;
+        }
         
     }
 
