@@ -7,9 +7,16 @@ class Product {
     public $quantity;
     public $discount;
 
-    public function setName($value) {
+    function __construct($title, $price, $quantity) {
+        $this->setTitle($title);
+        $this->setPrice($price);
+        $this->setQuantity($quantity);
+
+    }
+
+    public function setTitle($value) {
         //controllo: si possono escludere caratteri indesiderati
-        $this->name = $value;
+        $this->title = $value;
         
     }
 
