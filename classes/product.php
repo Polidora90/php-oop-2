@@ -20,8 +20,8 @@ class Product {
         
     }
 
-    public function getName() {
-        return $this->name;
+    public function getTitle() {
+        return $this->title;
     }
 
     public function setPrice($value) {
@@ -57,17 +57,25 @@ class Product {
 
     public function setDiscount($quantity) {
         if ($quantity > 1) {
-            $this->discount = 10;
+            $this->discount = 0.9;
         } else if ($quantity > 4) {
-            $this->discount = 30;
+            $this->discount = 0.7;
         } else {
-            $this->discount = 0;
+            $this->discount = 1;
         }
         
     }
 
     public function getDiscount() {
         return $this->discount;
+    }
+
+    public function calcPrize($price, $quantity) {
+        $this->setDiscount($quantity);
+
+        $totalPrice = ($price*$quantity) * $this->getDiscount();
+
+        return $totalPrice;
     }
 
 }
