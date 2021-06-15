@@ -2,6 +2,7 @@
 
 class Product {
     public $title;
+    public $brand;
     public $price;
     public $description;
     public $quantity;
@@ -22,6 +23,15 @@ class Product {
 
     public function getTitle() {
         return $this->title;
+    }
+
+    public function setbrand($value) {
+        $this->brand = $value;
+        
+    }
+
+    public function getBrand() {
+        return $this->brand;
     }
 
     public function setPrice($value) {
