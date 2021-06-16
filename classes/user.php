@@ -4,8 +4,13 @@ class User {
     public $surname;
     public $address;
 
+    function __construct($name, $surname, $street, $number, $city, $cap) {
+        $this->setName($name);
+        $this->setSurname($surname);
+        $this->setAddress($street, $number, $city, $cap);
+    }
+   
     public function setName($value) {
-        //controllo: si possono escludere caratteri indesiderati
         $this->name = $value;
         
     }
@@ -15,7 +20,6 @@ class User {
     }
 
     public function setSurname($value) {
-        //controllo: si possono escludere caratteri indesiderati
         $this->surname = $value;
         
     }

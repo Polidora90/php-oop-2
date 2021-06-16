@@ -1,8 +1,8 @@
 <?php
 
 class CreditCard {
-    public $cardCode;
-    public $owner;
+    private $cardCode;
+    private $owner;
 
     public function setOwner($name, $surname) {
         $this->owner = $name . " " . $surname;

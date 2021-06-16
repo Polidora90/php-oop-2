@@ -67,11 +67,11 @@ class Product {
 
     public function setDiscount($quantity) {
         if ($quantity > 1) {
-            $this->discount = 0.9;
+            $this->discount = 0.1;
         } else if ($quantity > 4) {
-            $this->discount = 0.7;
+            $this->discount = 0.3;
         } else {
-            $this->discount = 1;
+            $this->discount = 0;
         }
         
     }
@@ -83,7 +83,7 @@ class Product {
     public function calcPrize($price, $quantity) {
         $this->setDiscount($quantity);
 
-        $totalPrice = ($price*$quantity) * $this->getDiscount();
+        $totalPrice = ($price*$quantity) *(1 - $this->getDiscount()) ;
 
         return $totalPrice;
     }
