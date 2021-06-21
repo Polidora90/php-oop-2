@@ -8,10 +8,10 @@ require_once("./classes/payment.php");
 
 
 
-$prodottoTest = new Product("Samsung qualcosa", "799.00", 2);
+$prodottoTest = new Product("Samsung qualcosa", 799.00, 2);
 
 var_dump($prodottoTest);
-echo $prodottoTest->calcPrize(799.00, 1);
+echo $prodottoTest->calcPrice($this->$price, 1);
 
 $myUser = new PremiumUser("2021-06-16", "Antonella", "Elia", "Marconi", "10/d", "Verona", "37042");
 
